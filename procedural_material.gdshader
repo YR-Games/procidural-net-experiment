@@ -1,10 +1,22 @@
 shader_type spatial;
 uniform float scale;
+uniform float p1;
+uniform float p2;
 #include "shader_modules/library.gdshaderinc"
 
+/*
+функции:
+bn - синий шум (описан в файле BlueNoise.gdshaderinc использует random из random.gdshaderinc
+colorize - сопоставляет цвета палитры первому параметру t, палитра строится по четырем трехмерным векторам (описан в файле library.gdshaderinc)
+параметры:
+scale
+p1
+p2
+опционально можно выделить вектора палитры
+*/
 void fragment() {
  vec2 uv=UV*scale;
- vec2 new_uv=uv+bn(uv)*(1.-bn(uv*32.));
+ vec2 new_uv=uv+bn(uv*p1)*(1.-bn(uv*p2));
 
 	ALBEDO=colorize(bn(new_uv),vec3(0.5, 0.5, 0.5),vec3(0.5, 0.5, 0.5), vec3(1.0, 1.0, 1.0),vec3(0.00, 0.33, 0.67));
 

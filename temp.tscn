@@ -8,6 +8,8 @@
 render_priority = 0
 shader = ExtResource("1_pippe")
 shader_parameter/scale = 37.53
+shader_parameter/p1 = 0.0
+shader_parameter/p2 = 0.0
 
 [node name="Node3D" type="Node3D" unique_id=427790664]
 
