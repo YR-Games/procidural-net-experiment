@@ -3,7 +3,6 @@ class_name BlueNoiseNeuron extends Neuron
 
 func _init():
 	params = []
-	next_neurons = []
 	intermediate_results = []
 
 

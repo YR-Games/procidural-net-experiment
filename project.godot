@@ -8,11 +8,25 @@
 
 config_version=5
 
+[accessibility]
+
+general/accessibility_support=2
+
 [application]
 
 config/name="ProciduralNetExperiment"
+run/main_scene="uid://dmcaagv0qv1ru"
 config/features=PackedStringArray("4.6", "Forward Plus")
+run/delta_smoothing=false
 config/icon="res://icon.svg"
+
+[debug]
+
+shader_language/warnings/enable=false
+
+[display]
+
+window/vsync/vsync_mode=0
 
 [file_customization]
 
@@ -20,10 +34,16 @@ folder_colors={
 "res://Classes/": "pink"
 }
 
+[memory]
+
+limits/message_queue/max_size_mb=64
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
 
 [rendering]
 
+occlusion_culling/bvh_build_quality=0
 rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"

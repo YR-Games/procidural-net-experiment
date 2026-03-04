@@ -9,7 +9,6 @@ func _init():
 		Vector3(1.0, 1.0, 1.0),   # c
 		Vector3(0.0, 0.33, 0.67)  # d
 	]
-	next_neurons = []
 	intermediate_results = []
 
 
